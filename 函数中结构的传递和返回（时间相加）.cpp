@@ -1,5 +1,5 @@
 //Using structures with functions
-//¼ÆËãÊ±¼äºÍ
+//è®¡ç®—æ—¶é—´å’Œ
 #include<iostream>
 struct spend_time
 {
@@ -8,7 +8,7 @@ struct spend_time
 	int seconds;
 };
 
-const int Aff = 60;//Ê±ºÍ·ÖÖÓ¡¢·ÖÖÓºÍÃëÖ®¼äµÄ×ª»»ÏµÊı
+const int Aff = 60;//æ—¶å’Œåˆ†é’Ÿã€åˆ†é’Ÿå’Œç§’ä¹‹é—´çš„è½¬æ¢ç³»æ•°
 using namespace std;
 spend_time sum(spend_time a, spend_time b);
 int main()
@@ -32,10 +32,10 @@ spend_time sum(spend_time a,spend_time b)
 	spend_time total;
 	int T_hours, T_min, T_sec;
 	T_sec = a.seconds + b.seconds;
-	T_min = a.minutes + b.minutes + T_sec / 60;
-	T_hours = a.hours + b.hours + T_min / 60;
-	total.seconds = T_sec % 60;
-	total.minutes = T_min % 60;
+	T_min = a.minutes + b.minutes + T_sec / Aff;
+	T_hours = a.hours + b.hours + T_min / Aff;
+	total.seconds = T_sec % Aff;
+	total.minutes = T_min % Aff;
 	total.hours = T_hours;
 	return total;
 }
